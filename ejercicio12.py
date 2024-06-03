@@ -1,4 +1,4 @@
-print("Juego\nMe daras dos numeros de esos sacare su diferencia si:\n » Su resultado es un numero par te mostrare la suma entre los 2 numeros \n » Si su resultado es un numero primo te mostrare su producto \n » Si termina en cuatro el resultado te mostrare los digitos de los numeros\n")
+print("Juego (Ejercicio 12): \nMe daras dos numeros de esos sacare su diferencia si:\n » Su resultado es un numero par te mostrare la suma entre los 2 numeros \n » Si su resultado es un numero primo te mostrare su producto \n » Si termina en cuatro el resultado te mostrare los digitos de los numeros\n")
 
 primerNumero = int(input("Ingrese el primer numero: "))
 segundoNumero = int(input("Ingrese el segundo numero: "))
