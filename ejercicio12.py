@@ -35,4 +35,4 @@ else:
         for digitos in str(segundoNumero):
             print(digitos)
     else:
-        print("El numero no termina en 4...")*
+        print("El numero no termina en 4...")
