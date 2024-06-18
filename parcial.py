@@ -6,7 +6,7 @@ while sistema == "S":
   estudiantes["Nombre"] = input("Ingrese el nombre del estudiante: ")
   estudiantes["Matricula"] = input("Ingrese su matricula: ")
   print(estudiantes)
-  
+  letras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   primeraNota = int(input("Ingrese la primera nota: "))
   segundaNota = int(input("Ingrese la segunda nota: "))
   terceraNota = int(input("Ingrese la tercera nota: "))
@@ -17,7 +17,7 @@ while sistema == "S":
   notas.append(segundaNota)
   notas.append(terceraNota)
   notas.append(cuartaNota)
-  if notas[0] < 0 or notas[1] > 100 or notas[1] < 0 or notas[1] > 100 or notas[2] < 0 or notas[2] > 100 or notas[3] < 0 or notas[3] > 100:
+  if notas[0] < 0 or notas[0] > 100 or notas[0] in letras or notas[1] < 0 or notas[1] > 100 or notas[1] in letras or notas[2] < 0 or notas[2] > 100 or notas[2] in letras or notas[3] < 0 or notas[3] > 100 or notas[3] in letras:
     print("Las notas deben ser mayores o iguales a 0 y menores o iguales a 100")
     break
   else:
