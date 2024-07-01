@@ -1,3 +1,6 @@
+#5. Leer dos números y mostrar todos los números terminados en 4 comprendidos entre ellos.
+
+
 numeroUno = int(input("Dame el primer numero: \n"))
 numeroDos = int(input("Dame el segundo numero: \n"))
 
