@@ -1,4 +1,4 @@
-# Leer un texto y realizar las siguientes operaciones: Retornar los dos últimos caracteres del texto
+# Leer un texto y realizar las siguientes operaciones: Retornar la cantidad de veces que se repite el último caracter
 
 
 
