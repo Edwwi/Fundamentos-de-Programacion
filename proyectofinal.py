@@ -1,4 +1,4 @@
-productos = {"001:" : {"nombre": "Producto 1", "precio" : "$200"}, "002" : {"nombre": "Producto 1", "precio" : "$200"}}
+productos = {"001" : {"nombre": "Cereal", "precio" : 500}, "002" : {"nombre": "Carne", "precio" : 200}}
 
 facturas = []
 
@@ -12,8 +12,40 @@ def opciones(): # Menu Principal
 
 # Opciones anteriores:
 def crearFactura():
-    print("Despues sigo")
+    factura = {}
+    factura["productos"] = []
+    total = 0
+    
+    print("Seleccione los productos para la factura (ingrese 'N' para finalizar): ")
 
+    while True:
+        codigo = input("» Ingrese el codigo del producto: ")
+        if codigo == "N":
+            break
+        elif codigo in productos:
+            cantidad = int(input(f"» Ingrese la cantidad de '{productos[codigo]['nombre']}': "))
+            print(f"Tienes {cantidad} de {productos[codigo]['nombre']}")
+            subtotal = productos[codigo]['precio']*cantidad
+            total += subtotal
+            factura["productos"].append({
+    "codigo": codigo,
+    "nombre": productos[codigo]["nombre"],
+    "precio": productos[codigo]["precio"],
+    "cantidad": cantidad,
+    "subtotal": subtotal
+})
+            print(f"{cantidad} x {productos[codigo]['nombre']} agregado a la factura. Subtotal: {subtotal}")
+        else:
+            print("Codigo de producto invalido")
+
+        factura["total"] = total
+        factura["numero"] = len(facturas) + 1
+        facturas.append(factura)
+        print(f"Factura creada exitosamente. Total: {total}")
+
+
+
+ 
 def verFacturas():
     print("Despues sigo")
 
