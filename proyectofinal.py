@@ -47,7 +47,17 @@ def crearFactura():
 
  
 def verFacturas():
-    print("Despues sigo")
+
+    if not facturas:
+        print("No hay facturas. crea una")
+        return
+    
+    for factura in facturas:
+        print(f"Factura #{factura['numero']}:")
+        for producto in factura["productos"]:
+            print(f" - {producto['cantidad']} x {producto['nombre']} (Código: {producto['codigo']}) - Subtotal: {producto['subtotal']}")
+        print(f"Total: {factura['total']} facturas.")
+        
 
 def listadoProductos():
     print("Despues sigo")
