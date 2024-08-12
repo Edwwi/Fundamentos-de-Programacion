@@ -56,15 +56,27 @@ def verFacturas():
         print(f"Factura #{factura['numero']}:")
         for producto in factura["productos"]:
             print(f" - {producto['cantidad']} x {producto['nombre']} (Código: {producto['codigo']}) - Subtotal: {producto['subtotal']}")
-        print(f"Total: {factura['total']} facturas.")
+        print(f"Total: ${factura['total']}")
         
 
 def listadoProductos():
-    print("Despues sigo")
+    print("Lista de productos:")
+    for codigo, detalles in productos.items():
+        print(f"{codigo}: {detalles['nombre']} - Precio: {detalles['precio']}")
 
 def agregarProductos():
-    print("Despues sigo")
+    codigo = input("» Ingrese el código del nuevo producto: ")
+    if codigo in productos:
+        print("El código ya existe.")
+        return
+    
+    nombre = input("» Ingrese el nombre del producto: ")
+    precio = float(input("» Ingrese el precio del producto: "))
+    
+    productos[codigo] = {"nombre": nombre, "precio": precio}
+    print(f"Producto '{nombre}' añadido exitosamente.")
 
+    
 # Bucle Principal
 
 while True:
